@@ -1,0 +1,33 @@
+[7, 5, 1, 8, 3, 6, 0, 9, 4, 2] dizisinin Binary-Search-Tree aşamalarını yazınız.
+Örnek: root x'dir. root'un sağından y bulunur. Solunda z bulunur vb.
+
+Binary search tree'de bir kök elemana ihtiyaç vardır.
+Kök elemanı değer olarak dizinin ortalarında bir sayı olursa çok daha homojen dağılıma sahip bir ağaç elde edilir.
+Bu yüzden, 7 sayısı kök olarak seçilmiştir.
+5 sayısı 7 ile kıyaslanır. 5, 7'den küçük olduğu için sola yazılır.
+     7
+    /
+   5
+1 elemanı 7'den küçük olduğu için sola atılır. Ardından 1, 5 ile kıyaslanır. 1, 5'ten de küçük olduğu için 5'in soluna yazılır.
+         7
+        /
+       5
+      /
+     1
+8 elemanı, kök olan 7 sayısı ile kıyaslanır. 8, 7'den büyük olduğu için 7'nin sağına yazılır.
+         7
+        / \
+       5   8
+      /
+     1
+Bu işlemlere tüm elemanlar için devam edilir. Sonuçta ortaya çıkan yapı aşağıda gözüktüğü gibidir.
+         7  ----> Kök
+        / \
+       5   8
+      / \   \
+     1   6   9
+    / \
+   0   3
+      / \
+     2   4
+Burada kök olarak 7 yerinde 9 veya 2 seçilmiş olsaydı oldukça dengesiz bir binary search tree ortaya çıkmış olacaktı.
